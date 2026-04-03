@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///Users/Johana/Downloads/plan_maestro_formacion.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan Maestro de Formación | VidaNatura</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
+  :root {
+    --bg: #f7f6f2; --surface: #ffffff; --border: #e8e6df;
+    --text-primary: #1a1916; --text-secondary: #6b6960; --text-muted: #9e9b92;
+    --green: #1D9E75; --green-light: #E1F5EE; --green-dark: #085041;
+    --purple-light: #EEEDFE; --purple-dark: #3C3489;
+    --coral-light: #FAECE7; --coral-dark: #993C1D;
+    --amber-light: #FAEEDA; --amber-dark: #633806;
+    --blue-light: #E6F1FB; --blue-dark: #0C447C;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text-primary); padding: 40px 24px; }
+  header { max-width: 860px; margin: 0 auto 32px; border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+  .header-tag { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--green); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+  header h1 { font-size: 26px; font-weight: 600; margin-bottom: 6px; }
+  header p { font-size: 14px; color: var(--text-secondary); }
+  .cards { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+  .colaborador { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--surface); }
+  .colab-header { display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: #fafaf8; cursor: pointer; user-select: none; }
+  .colab-badge { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0; }
+  .colab-info { flex: 1; }
+  .colab-info h3 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+  .colab-info p { font-size: 11px; color: var(--text-secondary); }
+  .nivel-tag { font-size: 10px; padding: 2px 9px; border-radius: 8px; font-weight: 500; white-space: nowrap; }
+  .nivel-alta { background: var(--coral-light); color: var(--coral-dark); }
+  .nivel-media { background: var(--amber-light); color: var(--amber-dark); }
+  .nivel-baja { background: var(--green-light); color: var(--green-dark); }
+  .chevron { font-size: 11px; color: var(--text-muted); transition: transform 0.2s; margin-left: 4px; }
+  .chevron.open { transform: rotate(180deg); }
+  .colab-body { display: none; padding: 16px 18px; border-top: 1px solid var(--border); }
+  .colab-body.open { display: block; }
+  .cursos-grid { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+  .curso { display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; border-radius: 8px; background: var(--bg); border: 1px solid var(--border); }
+  .num { font-size: 10px; font-weight: 600; color: var(--text-muted); width: 16px; flex-shrink: 0; margin-top: 3px; }
+  .plataforma-badge { font-size: 9px; font-weight: 600; padding: 2px 7px; border-radius: 6px; white-space: nowrap; flex-shrink: 0; margin-top: 3px; }
+  .udemy { background: #EAF3DE; color: #27500A; }
+  .coursera { background: var(--blue-light); color: var(--blue-dark); }
+  .curso-info h4 { font-size: 12px; font-weight: 500; margin-bottom: 2px; }
+  .curso-info p { font-size: 11px; color: var(--text-secondary); }
+  .curso-meta { display: flex; gap: 6px; margin-top: 5px; flex-wrap: wrap; }
+  .meta-tag { font-size: 10px; color: var(--text-secondary); background: var(--surface); border: 1px solid var(--border); padding: 1px 6px; border-radius: 5px; }
+  .cronograma { display: grid; grid-template-columns: repeat(6,1fr); gap: 4px; }
+  .mes { border-radius: 7px; padding: 7px 4px; text-align: center; background: var(--green-light); border: 1px solid var(--green); }
+  .mes-label { font-size: 11px; font-weight: 600; color: var(--green-dark); margin-bottom: 2px; }
+  .mes-desc { font-size: 9px; color: var(--green); line-height: 1.3; }
+  footer { max-width: 860px; margin: 32px auto 0; font-size: 11px; color: var(--text-muted); text-align: center; font-family: 'DM Mono', monospace; }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-tag">VidaNatura Centroamérica · Sección 03 · Plan Maestro de Formación</div>
+  <h1>Rutas de Aprendizaje — 10 Colaboradores</h1>
+  <p>5 cursos por colaborador · Udemy Business + Coursera · Plan de 6 meses · Alineado a DigComp 2.2</p>
+</header>
+<div class="cards">
+
+<!-- 1. Andrea Molina -->
+<div class="colaborador">
+  <div class="colab-header" onclick="toggle(this)">
+    <div class="colab-badge" style="background:var(--green-light);color:var(--green-dark)">AM</div>
+    <div class="colab-info"><h3>1. Andrea Molina — Gerente Regional de Ventas</h3><p>Brechas: Alfabetización informacional · Resolución de problemas · Contenido digital</p></div>
+    <span class="nivel-tag nivel-alta">Brecha alta</span><span class="chevron">▼</span>
+  </div>
+  <div class="colab-body">
+    <div class="cursos-grid">
+      <div class="curso"><span class="num">1</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Microsoft Power BI — De cero a experto</h4><p>Dashboards ejecutivos y análisis de ventas regionales</p><div class="curso-meta"><span class="meta-tag">12h</span><span class="meta-tag">DigComp Área 1</span><span class="meta-tag">Mes 1</span></div></div></div>
+      <div class="curso"><span class="num">2</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Data-driven Decision Making — PwC</h4><p>Métricas de negocio y reportes basados en datos</p><div class="curso-meta"><span class="meta-tag">4 sem</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 2</span></div></div></div>
+      <div class="curso"><span class="num">3</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Odoo 17: módulos de ventas y CRM para gerentes</h4><p>Pipeline regional, reportes y seguimiento de objetivos</p><div class="curso-meta"><span class="meta-tag">8h</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 3</span></div></div></div>
+      <div class="curso"><span class="num">4</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Storytelling con datos para directivos</h4><p>Visualización, presentación de resultados e informes ejecutivos</p><div class="curso-meta"><span class="meta-tag">6h</span><span class="meta-tag">DigComp Área 3</span><span class="meta-tag">Mes 4</span></div></div></div>
+      <div class="curso"><span class="num">5</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Leading Digital Transformation — IE Business School</h4><p>Estrategia de transformación digital desde el rol de liderazgo</p><div class="curso-meta"><span class="meta-tag">6 sem</span><span class="meta-tag">DigComp Área 5</span><span class="meta-tag">Mes 5–6</span></div></div></div>
+    </div>
+    <div class="cronograma">
+      <div class="mes"><div class="mes-label">M1</div><div class="mes-desc">Power BI</div></div>
+      <div class="mes"><div class="mes-label">M2</div><div class="mes-desc">Data-driven PwC</div></div>
+      <div class="mes"><div class="mes-label">M3</div><div class="mes-desc">Odoo CRM</div></div>
+      <div class="mes"><div class="mes-label">M4</div><div class="mes-desc">Storytelling datos</div></div>
+      <div class="mes"><div class="mes-label">M5</div><div class="mes-desc">Liderazgo digital</div></div>
+      <div class="mes"><div class="mes-label">M6</div><div class="mes-desc">Evaluación KPIs</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Carlos Fuentes -->
+<div class="colaborador">
+  <div class="colab-header" onclick="toggle(this)">
+    <div class="colab-badge" style="background:var(--purple-light);color:var(--purple-dark)">CF</div>
+    <div class="colab-info"><h3>2. Carlos Fuentes — Encargado de Tienda</h3><p>Brechas: Alfabetización informacional · Resolución de problemas · Seguridad</p></div>
+    <span class="nivel-tag nivel-alta">Brecha alta</span><span class="chevron">▼</span>
+  </div>
+  <div class="colab-body">
+    <div class="cursos-grid">
+      <div class="curso"><span class="num">1</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Competencias digitales para el trabajo moderno</h4><p>Office 365, colaboración en la nube y gestión de archivos</p><div class="curso-meta"><span class="meta-tag">6h</span><span class="meta-tag">DigComp Área 1, 2</span><span class="meta-tag">Mes 1</span></div></div></div>
+      <div class="curso"><span class="num">2</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Excel para gestión de inventarios y ventas</h4><p>Tablas dinámicas, fórmulas y control de stock básico</p><div class="curso-meta"><span class="meta-tag">5h</span><span class="meta-tag">DigComp Área 1</span><span class="meta-tag">Mes 2</span></div></div></div>
+      <div class="curso"><span class="num">3</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Odoo para retail: punto de venta e inventario</h4><p>POS, entradas/salidas de stock y reportes de tienda</p><div class="curso-meta"><span class="meta-tag">10h</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 3–4</span></div></div></div>
+      <div class="curso"><span class="num">4</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Cybersecurity Basics — IBM</h4><p>Contraseñas seguras, phishing y buenas prácticas digitales</p><div class="curso-meta"><span class="meta-tag">2 sem</span><span class="meta-tag">DigComp Área 4</span><span class="meta-tag">Mes 5</span></div></div></div>
+      <div class="curso"><span class="num">5</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Gestión de equipos y comunicación digital — Google</h4><p>Herramientas colaborativas, gestión de tareas y reportes digitales</p><div class="curso-meta"><span class="meta-tag">3 sem</span><span class="meta-tag">DigComp Área 2</span><span class="meta-tag">Mes 6</span></div></div></div>
+    </div>
+    <div class="cronograma">
+      <div class="mes"><div class="mes-label">M1</div><div class="mes-desc">Competencias digitales</div></div>
+      <div class="mes"><div class="mes-label">M2</div><div class="mes-desc">Excel inventarios</div></div>
+      <div class="mes"><div class="mes-label">M3</div><div class="mes-desc">Odoo POS</div></div>
+      <div class="mes"><div class="mes-label">M4</div><div class="mes-desc">Odoo reportes</div></div>
+      <div class="mes"><div class="mes-label">M5</div><div class="mes-desc">Ciberseguridad IBM</div></div>
+      <div class="mes"><div class="mes-label">M6</div><div class="mes-desc">Comunicación digital</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. María José Rivas -->
+<div class="colaborador">
+  <div class="colab-header" onclick="toggle(this)">
+    <div class="colab-badge" style="background:var(--amber-light);color:var(--amber-dark)">MJ</div>
+    <div class="colab-info"><h3>3. María José Rivas — Analista de Marketing Digital</h3><p>Brechas: Seguridad · Alfabetización informacional · Resolución de problemas</p></div>
+    <span class="nivel-tag nivel-media">Brecha media</span><span class="chevron">▼</span>
+  </div>
+  <div class="colab-body">
+    <div class="cursos-grid">
+      <div class="curso"><span class="num">1</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>HubSpot CRM y automatización de marketing</h4><p>Segmentación, flujos automatizados y campañas basadas en datos</p><div class="curso-meta"><span class="meta-tag">9h</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 1</span></div></div></div>
+      <div class="curso"><span class="num">2</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Marketing Analytics — University of Virginia</h4><p>Medición de campañas, atribución y ROI de marketing digital</p><div class="curso-meta"><span class="meta-tag">5 sem</span><span class="meta-tag">DigComp Área 1</span><span class="meta-tag">Mes 2</span></div></div></div>
+      <div class="curso"><span class="num">3</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>IA aplicada al marketing: ChatGPT y herramientas generativas</h4><p>Prompts para contenido, análisis de audiencias y personalización</p><div class="curso-meta"><span class="meta-tag">7h</span><span class="meta-tag">DigComp Área 3, 5</span><span class="meta-tag">Mes 3</span></div></div></div>
+      <div class="curso"><span class="num">4</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Privacy &amp; Security in Online Social Media — CMU</h4><p>Protección de datos de clientes, GDPR y uso ético de información</p><div class="curso-meta"><span class="meta-tag">4 sem</span><span class="meta-tag">DigComp Área 4</span><span class="meta-tag">Mes 4</span></div></div></div>
+      <div class="curso"><span class="num">5</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Google Analytics 4 (GA4) — Masterclass completa</h4><p>Eventos, embudos de conversión y reportes avanzados</p><div class="curso-meta"><span class="meta-tag">8h</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 5–6</span></div></div></div>
+    </div>
+    <div class="cronograma">
+      <div class="mes"><div class="mes-label">M1</div><div class="mes-desc">HubSpot CRM</div></div>
+      <div class="mes"><div class="mes-label">M2</div><div class="mes-desc">Marketing Analytics</div></div>
+      <div class="mes"><div class="mes-label">M3</div><div class="mes-desc">IA marketing</div></div>
+      <div class="mes"><div class="mes-label">M4</div><div class="mes-desc">Privacy CMU</div></div>
+      <div class="mes"><div class="mes-label">M5</div><div class="mes-desc">GA4 avanzado</div></div>
+      <div class="mes"><div class="mes-label">M6</div><div class="mes-desc">Evaluación final</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Roberto Paz -->
+<div class="colaborador">
+  <div class="colab-header" onclick="toggle(this)">
+    <div class="colab-badge" style="background:var(--coral-light);color:var(--coral-dark)">RP</div>
+    <div class="colab-info"><h3>4. Roberto Paz — Jefe de Logística y Distribución</h3><p>Brechas: Alfabetización informacional · Resolución de problemas · Seguridad</p></div>
+    <span class="nivel-tag nivel-alta">Brecha alta</span><span class="chevron">▼</span>
+  </div>
+  <div class="colab-body">
+    <div class="cursos-grid">
+      <div class="curso"><span class="num">1</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Logística y supply chain con herramientas digitales</h4><p>Gestión de rutas, proveedores y trazabilidad con sistemas digitales</p><div class="curso-meta"><span class="meta-tag">8h</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 1</span></div></div></div>
+      <div class="curso"><span class="num">2</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Odoo: módulo de inventario y logística</h4><p>Control de almacén, órdenes de compra y trazabilidad</p><div class="curso-meta"><span class="meta-tag">10h</span><span class="meta-tag">DigComp Área 1</span><span class="meta-tag">Mes 2–3</span></div></div></div>
+      <div class="curso"><span class="num">3</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Supply Chain Analytics — Rutgers University</h4><p>KPIs logísticos, análisis de demanda y optimización de inventario</p><div class="curso-meta"><span class="meta-tag">5 sem</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 4</span></div></div></div>
+      <div class="curso"><span class="num">4</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Excel avanzado para operaciones y logística</h4><p>Automatización de reportes, tablas dinámicas y seguimiento de KPIs</p><div class="curso-meta"><span class="meta-tag">7h</span><span class="meta-tag">DigComp Área 1</span><span class="meta-tag">Mes 5</span></div></div></div>
+      <div class="curso"><span class="num">5</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Cybersecurity Basics — IBM</h4><p>Seguridad de datos operativos, accesos y buenas prácticas digitales</p><div class="curso-meta"><span class="meta-tag">2 sem</span><span class="meta-tag">DigComp Área 4</span><span class="meta-tag">Mes 6</span></div></div></div>
+    </div>
+    <div class="cronograma">
+      <div class="mes"><div class="mes-label">M1</div><div class="mes-desc">Logística digital</div></div>
+      <div class="mes"><div class="mes-label">M2</div><div class="mes-desc">Odoo inventario</div></div>
+      <div class="mes"><div class="mes-label">M3</div><div class="mes-desc">Odoo logística</div></div>
+      <div class="mes"><div class="mes-label">M4</div><div class="mes-desc">Supply Chain Analytics</div></div>
+      <div class="mes"><div class="mes-label">M5</div><div class="mes-desc">Excel operaciones</div></div>
+      <div class="mes"><div class="mes-label">M6</div><div class="mes-desc">Ciberseguridad IBM</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. Lucía Hernández -->
+<div class="colaborador">
+  <div class="colab-header" onclick="toggle(this)">
+    <div class="colab-badge" style="background:var(--blue-light);color:var(--blue-dark)">LH</div>
+    <div class="colab-info"><h3>5. Lucía Hernández — Ejecutiva de Atención al Cliente</h3><p>Brechas: Comunicación digital · Seguridad · CRM operativo</p></div>
+    <span class="nivel-tag nivel-media">Brecha media</span><span class="chevron">▼</span>
+  </div>
+  <div class="colab-body">
+    <div class="cursos-grid">
+      <div class="curso"><span class="num">1</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>CRM para atención al cliente: Zendesk y Odoo</h4><p>Gestión de tickets, seguimiento de casos y experiencia del cliente</p><div class="curso-meta"><span class="meta-tag">7h</span><span class="meta-tag">DigComp Área 2, 5</span><span class="meta-tag">Mes 1</span></div></div></div>
+      <div class="curso"><span class="num">2</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Customer Experience Management — Tampere University</h4><p>Estrategia omnicanal, NPS y métricas de satisfacción</p><div class="curso-meta"><span class="meta-tag">4 sem</span><span class="meta-tag">DigComp Área 2</span><span class="meta-tag">Mes 2</span></div></div></div>
+      <div class="curso"><span class="num">3</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Comunicación digital profesional y trabajo remoto</h4><p>Herramientas colaborativas, netiqueta y comunicación asíncrona</p><div class="curso-meta"><span class="meta-tag">5h</span><span class="meta-tag">DigComp Área 2, 4</span><span class="meta-tag">Mes 3</span></div></div></div>
+      <div class="curso"><span class="num">4</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Cybersecurity Basics — IBM</h4><p>Protección de datos de clientes y buenas prácticas de seguridad</p><div class="curso-meta"><span class="meta-tag">2 sem</span><span class="meta-tag">DigComp Área 4</span><span class="meta-tag">Mes 4</span></div></div></div>
+      <div class="curso"><span class="num">5</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Resolución de problemas con herramientas digitales</h4><p>Design thinking básico, automatización de tareas y toma de decisiones</p><div class="curso-meta"><span class="meta-tag">5h</span><span class="meta-tag">DigComp Área 5</span><span class="meta-tag">Mes 5–6</span></div></div></div>
+    </div>
+    <div class="cronograma">
+      <div class="mes"><div class="mes-label">M1</div><div class="mes-desc">CRM Zendesk</div></div>
+      <div class="mes"><div class="mes-label">M2</div><div class="mes-desc">Customer Experience</div></div>
+      <div class="mes"><div class="mes-label">M3</div><div class="mes-desc">Comunicación digital</div></div>
+      <div class="mes"><div class="mes-label">M4</div><div class="mes-desc">Ciberseguridad IBM</div></div>
+      <div class="mes"><div class="mes-label">M5</div><div class="mes-desc">Resolución problemas</div></div>
+      <div class="mes"><div class="mes-label">M6</div><div class="mes-desc">Evaluación final</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. Diego Castillo -->
+<div class="colaborador">
+  <div class="colab-header" onclick="toggle(this)">
+    <div class="colab-badge" style="background:var(--green-light);color:var(--green-dark)">DC</div>
+    <div class="colab-info"><h3>6. Diego Castillo — Coordinador de E-commerce</h3><p>Brechas: Seguridad avanzada · Comunicación corporativa</p></div>
+    <span class="nivel-tag nivel-baja">Brecha baja</span><span class="chevron">▼</span>
+  </div>
+  <div class="colab-body">
+    <div class="cursos-grid">
+      <div class="curso"><span class="num">1</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Shopify avanzado: optimización y analítica</h4><p>Conversión, A/B testing e integraciones con ERP</p><div class="curso-meta"><span class="meta-tag">11h</span><span class="meta-tag">DigComp Área 3, 5</span><span class="meta-tag">Mes 1</span></div></div></div>
+      <div class="curso"><span class="num">2</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Google Data Analytics Certificate</h4><p>SQL, Tableau y hojas de cálculo avanzadas para e-commerce</p><div class="curso-meta"><span class="meta-tag">6 sem</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 2–3</span></div></div></div>
+      <div class="curso"><span class="num">3</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>IBM Cybersecurity Analyst Professional Certificate</h4><p>Seguridad en e-commerce, protección de datos y respuesta a incidentes</p><div class="curso-meta"><span class="meta-tag">8 sem</span><span class="meta-tag">DigComp Área 4</span><span class="meta-tag">Mes 4</span></div></div></div>
+      <div class="curso"><span class="num">4</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Comunicación estratégica para líderes digitales</h4><p>Presentaciones ejecutivas y comunicación interdepartamental</p><div class="curso-meta"><span class="meta-tag">6h</span><span class="meta-tag">DigComp Área 2</span><span class="meta-tag">Mes 5</span></div></div></div>
+      <div class="curso"><span class="num">5</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Digital Transformation — BCG</h4><p>Estrategia de adopción tecnológica y cultura digital organizacional</p><div class="curso-meta"><span class="meta-tag">5 sem</span><span class="meta-tag">DigComp Área 2, 5</span><span class="meta-tag">Mes 6</span></div></div></div>
+    </div>
+    <div class="cronograma">
+      <div class="mes"><div class="mes-label">M1</div><div class="mes-desc">Shopify avanzado</div></div>
+      <div class="mes"><div class="mes-label">M2</div><div class="mes-desc">Google Analytics</div></div>
+      <div class="mes"><div class="mes-label">M3</div><div class="mes-desc">SQL y datos</div></div>
+      <div class="mes"><div class="mes-label">M4</div><div class="mes-desc">Ciberseguridad IBM</div></div>
+      <div class="mes"><div class="mes-label">M5</div><div class="mes-desc">Comunicación líderes</div></div>
+      <div class="mes"><div class="mes-label">M6</div><div class="mes-desc">Agente de cambio</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 7. Patricia Solís -->
+<div class="colaborador">
+  <div class="colab-header" onclick="toggle(this)">
+    <div class="colab-badge" style="background:var(--amber-light);color:var(--amber-dark)">PS</div>
+    <div class="colab-info"><h3>7. Patricia Solís — Contadora General</h3><p>Brechas: Seguridad · Alfabetización informacional · Resolución de problemas</p></div>
+    <span class="nivel-tag nivel-alta">Brecha alta</span><span class="chevron">▼</span>
+  </div>
+  <div class="colab-body">
+    <div class="cursos-grid">
+      <div class="curso"><span class="num">1</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Odoo Contabilidad y Finanzas</h4><p>Módulo contable, conciliaciones y reportes financieros digitales</p><div class="curso-meta"><span class="meta-tag">12h</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 1–2</span></div></div></div>
+      <div class="curso"><span class="num">2</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Excel avanzado: Power Query y Power Pivot para contadores</h4><p>Automatización de reportes financieros y análisis de datos contables</p><div class="curso-meta"><span class="meta-tag">8h</span><span class="meta-tag">DigComp Área 1</span><span class="meta-tag">Mes 3</span></div></div></div>
+      <div class="curso"><span class="num">3</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Cybersecurity for Business — University of Colorado</h4><p>Protección de datos financieros y cumplimiento normativo digital</p><div class="curso-meta"><span class="meta-tag">4 sem</span><span class="meta-tag">DigComp Área 4</span><span class="meta-tag">Mes 4</span></div></div></div>
+      <div class="curso"><span class="num">4</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Google Workspace para equipos de trabajo</h4><p>Drive, Sheets colaborativo, Meet y documentos en la nube</p><div class="curso-meta"><span class="meta-tag">4h</span><span class="meta-tag">DigComp Área 2, 4</span><span class="meta-tag">Mes 5</span></div></div></div>
+      <div class="curso"><span class="num">5</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Finanzas para no financieros — Universidad de los Andes</h4><p>Interpretación de reportes digitales y dashboards financieros</p><div class="curso-meta"><span class="meta-tag">4 sem</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 6</span></div></div></div>
+    </div>
+    <div class="cronograma">
+      <div class="mes"><div class="mes-label">M1</div><div class="mes-desc">Odoo contabilidad</div></div>
+      <div class="mes"><div class="mes-label">M2</div><div class="mes-desc">Odoo reportes</div></div>
+      <div class="mes"><div class="mes-label">M3</div><div class="mes-desc">Excel avanzado</div></div>
+      <div class="mes"><div class="mes-label">M4</div><div class="mes-desc">Ciberseguridad</div></div>
+      <div class="mes"><div class="mes-label">M5</div><div class="mes-desc">Google Workspace</div></div>
+      <div class="mes"><div class="mes-label">M6</div><div class="mes-desc">Finanzas digitales</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 8. Fernando López -->
+<div class="colaborador">
+  <div class="colab-header" onclick="toggle(this)">
+    <div class="colab-badge" style="background:var(--coral-light);color:var(--coral-dark)">FL</div>
+    <div class="colab-info"><h3>8. Fernando López — Vendedor de Piso</h3><p>Brechas: Alfabetización informacional · Seguridad · Resolución de problemas</p></div>
+    <span class="nivel-tag nivel-media">Brecha media</span><span class="chevron">▼</span>
+  </div>
+  <div class="colab-body">
+    <div class="cursos-grid">
+      <div class="curso"><span class="num">1</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Competencias digitales esenciales para el trabajo</h4><p>Apps de trabajo, herramientas básicas de oficina y dispositivos</p><div class="curso-meta"><span class="meta-tag">5h</span><span class="meta-tag">DigComp Área 1, 2</span><span class="meta-tag">Mes 1</span></div></div></div>
+      <div class="curso"><span class="num">2</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Punto de venta digital: Odoo POS para vendedores</h4><p>Operación del POS, consulta de inventario en tiempo real y cierre de caja</p><div class="curso-meta"><span class="meta-tag">4h</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 2</span></div></div></div>
+      <div class="curso"><span class="num">3</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Cybersecurity Basics — IBM</h4><p>Contraseñas seguras, phishing y protección de datos del cliente</p><div class="curso-meta"><span class="meta-tag">2 sem</span><span class="meta-tag">DigComp Área 4</span><span class="meta-tag">Mes 3</span></div></div></div>
+      <div class="curso"><span class="num">4</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Atención al cliente digital y omnicanal</h4><p>WhatsApp Business, redes sociales y experiencia del cliente en tienda</p><div class="curso-meta"><span class="meta-tag">4h</span><span class="meta-tag">DigComp Área 2</span><span class="meta-tag">Mes 4</span></div></div></div>
+      <div class="curso"><span class="num">5</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Foundations of Digital Marketing — Google</h4><p>Fundamentos de marketing digital, SEO básico y presencia en línea</p><div class="curso-meta"><span class="meta-tag">3 sem</span><span class="meta-tag">DigComp Área 3, 5</span><span class="meta-tag">Mes 5–6</span></div></div></div>
+    </div>
+    <div class="cronograma">
+      <div class="mes"><div class="mes-label">M1</div><div class="mes-desc">Competencias básicas</div></div>
+      <div class="mes"><div class="mes-label">M2</div><div class="mes-desc">Odoo POS</div></div>
+      <div class="mes"><div class="mes-label">M3</div><div class="mes-desc">Ciberseguridad IBM</div></div>
+      <div class="mes"><div class="mes-label">M4</div><div class="mes-desc">Atención digital</div></div>
+      <div class="mes"><div class="mes-label">M5</div><div class="mes-desc">Marketing Google</div></div>
+      <div class="mes"><div class="mes-label">M6</div><div class="mes-desc">Evaluación final</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 9. Valeria Cruz -->
+<div class="colaborador">
+  <div class="colab-header" onclick="toggle(this)">
+    <div class="colab-badge" style="background:var(--purple-light);color:var(--purple-dark)">VC</div>
+    <div class="colab-info"><h3>9. Valeria Cruz — Especialista en Compras</h3><p>Brechas: Alfabetización informacional · Resolución de problemas · Seguridad</p></div>
+    <span class="nivel-tag nivel-media">Brecha media</span><span class="chevron">▼</span>
+  </div>
+  <div class="colab-body">
+    <div class="cursos-grid">
+      <div class="curso"><span class="num">1</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Odoo Compras: gestión de proveedores y órdenes</h4><p>Solicitudes de cotización, órdenes de compra y evaluación de proveedores</p><div class="curso-meta"><span class="meta-tag">8h</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 1</span></div></div></div>
+      <div class="curso"><span class="num">2</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Procurement &amp; Supply Chain Management — Rutgers</h4><p>Estrategia de compras, negociación digital y gestión de contratos</p><div class="curso-meta"><span class="meta-tag">5 sem</span><span class="meta-tag">DigComp Área 1, 2</span><span class="meta-tag">Mes 2</span></div></div></div>
+      <div class="curso"><span class="num">3</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Power BI para compras y supply chain</h4><p>Dashboards de proveedores, análisis de costos y alertas de reabastecimiento</p><div class="curso-meta"><span class="meta-tag">7h</span><span class="meta-tag">DigComp Área 1</span><span class="meta-tag">Mes 3</span></div></div></div>
+      <div class="curso"><span class="num">4</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Cybersecurity for Business — University of Colorado</h4><p>Seguridad en negociaciones digitales y protección de contratos</p><div class="curso-meta"><span class="meta-tag">4 sem</span><span class="meta-tag">DigComp Área 4</span><span class="meta-tag">Mes 4</span></div></div></div>
+      <div class="curso"><span class="num">5</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Negociación y comunicación digital con proveedores</h4><p>Herramientas digitales para negociación y contratos electrónicos</p><div class="curso-meta"><span class="meta-tag">5h</span><span class="meta-tag">DigComp Área 2, 5</span><span class="meta-tag">Mes 5–6</span></div></div></div>
+    </div>
+    <div class="cronograma">
+      <div class="mes"><div class="mes-label">M1</div><div class="mes-desc">Odoo compras</div></div>
+      <div class="mes"><div class="mes-label">M2</div><div class="mes-desc">Procurement Rutgers</div></div>
+      <div class="mes"><div class="mes-label">M3</div><div class="mes-desc">Power BI supply</div></div>
+      <div class="mes"><div class="mes-label">M4</div><div class="mes-desc">Ciberseguridad</div></div>
+      <div class="mes"><div class="mes-label">M5</div><div class="mes-desc">Negociación digital</div></div>
+      <div class="mes"><div class="mes-label">M6</div><div class="mes-desc">Evaluación final</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 10. Jorge Méndez -->
+<div class="colaborador">
+  <div class="colab-header" onclick="toggle(this)">
+    <div class="colab-badge" style="background:var(--blue-light);color:var(--blue-dark)">JM</div>
+    <div class="colab-info"><h3>10. Jorge Méndez — Gerente de TI</h3><p>Brechas: Liderazgo de cambio · Transferencia de conocimiento · Comunicación</p></div>
+    <span class="nivel-tag nivel-baja">Brecha baja</span><span class="chevron">▼</span>
+  </div>
+  <div class="colab-body">
+    <div class="cursos-grid">
+      <div class="curso"><span class="num">1</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Digital Transformation — Boston Consulting Group</h4><p>Estrategia de cambio organizacional y cultura digital</p><div class="curso-meta"><span class="meta-tag">6 sem</span><span class="meta-tag">DigComp Área 2, 5</span><span class="meta-tag">Mes 1</span></div></div></div>
+      <div class="curso"><span class="num">2</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>Gestión del cambio organizacional con metodología ADKAR</h4><p>Marcos de adopción, resistencia al cambio y comunicación interna</p><div class="curso-meta"><span class="meta-tag">9h</span><span class="meta-tag">DigComp Área 2</span><span class="meta-tag">Mes 2</span></div></div></div>
+      <div class="curso"><span class="num">3</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Learning &amp; Development in Organizations — HRCI</h4><p>Diseño de programas de formación interna y medición de impacto</p><div class="curso-meta"><span class="meta-tag">4 sem</span><span class="meta-tag">DigComp Área 2, 5</span><span class="meta-tag">Mes 3</span></div></div></div>
+      <div class="curso"><span class="num">4</span><span class="plataforma-badge udemy">Udemy</span><div class="curso-info"><h4>KPIs y métricas digitales para gerentes de TI</h4><p>Tableros de control, SLAs, uptime y métricas de adopción tecnológica</p><div class="curso-meta"><span class="meta-tag">7h</span><span class="meta-tag">DigComp Área 1, 5</span><span class="meta-tag">Mes 4</span></div></div></div>
+      <div class="curso"><span class="num">5</span><span class="plataforma-badge coursera">Coursera</span><div class="curso-info"><h4>Comunicación efectiva para líderes tecnológicos — UC Davis</h4><p>Presentaciones ejecutivas, gestión de stakeholders y liderazgo técnico</p><div class="curso-meta"><span class="meta-tag">4 sem</span><span class="meta-tag">DigComp Área 2</span><span class="meta-tag">Mes 5–6</span></div></div></div>
+    </div>
+    <div class="cronograma">
+      <div class="mes"><div class="mes-label">M1</div><div class="mes-desc">BCG Digital</div></div>
+      <div class="mes"><div class="mes-label">M2</div><div class="mes-desc">ADKAR cambio</div></div>
+      <div class="mes"><div class="mes-label">M3</div><div class="mes-desc">L&amp;D organizacional</div></div>
+      <div class="mes"><div class="mes-label">M4</div><div class="mes-desc">KPIs TI</div></div>
+      <div class="mes"><div class="mes-label">M5</div><div class="mes-desc">Comunicación líderes</div></div>
+      <div class="mes"><div class="mes-label">M6</div><div class="mes-desc">Cierre del plan</div></div>
+    </div>
+  </div>
+</div>
+
+</div>
+<footer>VidaNatura Centroamérica S.A. · Consultoría de Transformación Digital 2026 · Sección 03 — Plan Maestro de Formación</footer>
+<script>
+function toggle(header) {
+  const body = header.nextElementSibling;
+  const chevron = header.querySelector('.chevron');
+  body.classList.toggle('open');
+  chevron.classList.toggle('open');
+}
+</script>
+
+
+</body></html>
