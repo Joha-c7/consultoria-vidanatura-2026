@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///Users/Johana/Downloads/digcomp_perfiles_6_10.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DigComp 2.2 — Perfiles 6 a 10 | VidaNatura</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --border: #e8e6df;
+    --text-primary: #1a1916;
+    --text-secondary: #6b6960;
+    --text-muted: #9e9b92;
+    --green: #1D9E75;
+    --green-light: #E1F5EE;
+    --green-dark: #085041;
+    --purple: #7F77DD;
+    --purple-light: #EEEDFE;
+    --purple-dark: #3C3489;
+    --coral: #D85A30;
+    --coral-light: #FAECE7;
+    --coral-dark: #993C1D;
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --amber-dark: #633806;
+    --blue: #185FA5;
+    --blue-light: #E6F1FB;
+    --blue-dark: #0C447C;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    padding: 40px 24px;
+    min-height: 100vh;
+  }
+
+  header {
+    max-width: 860px;
+    margin: 0 auto 36px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+  }
+
+  .header-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--green);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  header h1 { font-size: 26px; font-weight: 600; margin-bottom: 6px; }
+  header p { font-size: 14px; color: var(--text-secondary); }
+
+  .legend { display: flex; gap: 20px; margin-top: 16px; }
+  .legend-item { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--text-secondary); }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+
+  .cards { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+
+  .card-header { display: flex; align-items: flex-start; gap: 14px; }
+
+  .badge { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; flex-shrink: 0; }
+
+  .card-meta h2 { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+  .card-meta p { font-size: 12px; color: var(--text-secondary); }
+
+  .card-body { display: flex; gap: 20px; align-items: flex-start; }
+
+  .scores { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+
+  .score-row { display: flex; align-items: center; gap: 10px; }
+
+  .score-label { font-size: 12px; color: var(--text-secondary); width: 150px; flex-shrink: 0; }
+
+  .dots { display: flex; gap: 3px; }
+  .dot { width: 14px; height: 14px; border-radius: 3px; }
+  .dot-actual { background: var(--green); }
+  .dot-empty { background: var(--border); }
+
+  .score-meta { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--text-muted); white-space: nowrap; }
+
+  .tag { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+  .tag-alta { background: var(--coral-light); color: var(--coral-dark); }
+  .tag-media { background: var(--amber-light); color: var(--amber-dark); }
+  .tag-baja { background: var(--green-light); color: var(--green-dark); }
+
+  .card-note { font-size: 12px; color: var(--text-secondary); line-height: 1.6; padding-top: 4px; border-top: 1px solid var(--border); }
+
+  canvas { flex-shrink: 0; }
+
+  footer { max-width: 860px; margin: 32px auto 0; font-size: 11px; color: var(--text-muted); text-align: center; font-family: 'DM Mono', monospace; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">VidaNatura Centroamérica · Sección 02 · DigComp 2.2</div>
+  <h1>Diagnósticos Individuales — Perfiles 6 a 10</h1>
+  <p>Evaluación de competencias digitales bajo el marco DigComp 2.2 (Comisión Europea). Escala 1–5: Básico (1–2) · Intermedio (3) · Avanzado (4) · Altamente especializado (5).</p>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div> Nivel actual</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--purple);opacity:0.7"></div> Nivel requerido</div>
+  </div>
+</header>
+
+<div class="cards">
+
+  <!-- Perfil 6 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="badge" style="background:var(--green-light);color:var(--green-dark)">DC</div>
+      <div class="card-meta">
+        <h2>6. Diego Castillo — Coordinador de E-commerce</h2>
+        <p>Guatemala · 26 años · Licenciatura en Sistemas de Información</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="scores">
+        <div class="score-row"><span class="score-label">Alfabetización informacional</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div></div><span class="score-meta">5/5 · req 5</span><span class="tag tag-baja">Sin brecha</span></div>
+        <div class="score-row"><span class="score-label">Comunicación y colaboración</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div></div><span class="score-meta">4/5 · req 5</span><span class="tag tag-media">Brecha media</span></div>
+        <div class="score-row"><span class="score-label">Creación de contenido digital</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div></div><span class="score-meta">5/5 · req 5</span><span class="tag tag-baja">Sin brecha</span></div>
+        <div class="score-row"><span class="score-label">Seguridad</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div></div><span class="score-meta">4/5 · req 5</span><span class="tag tag-media">Brecha media</span></div>
+        <div class="score-row"><span class="score-label">Resolución de problemas</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div></div><span class="score-meta">5/5 · req 5</span><span class="tag tag-baja">Sin brecha</span></div>
+      </div>
+      <canvas id="r6" width="140" height="140"></canvas>
+    </div>
+    <p class="card-note">El perfil más avanzado de la empresa. Su brecha menor está en comunicación formal y protocolos de seguridad corporativa. Candidato natural para ser agente de cambio interno.</p>
+  </div>
+
+  <!-- Perfil 7 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="badge" style="background:var(--amber-light);color:var(--amber-dark)">PS</div>
+      <div class="card-meta">
+        <h2>7. Patricia Solís — Contadora General</h2>
+        <p>Honduras · 50 años · Licenciatura en Contaduría Pública</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="scores">
+        <div class="score-row"><span class="score-label">Alfabetización informacional</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">2/5 · req 4</span><span class="tag tag-alta">Brecha alta</span></div>
+        <div class="score-row"><span class="score-label">Comunicación y colaboración</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">3/5 · req 4</span><span class="tag tag-media">Brecha media</span></div>
+        <div class="score-row"><span class="score-label">Creación de contenido digital</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">2/5 · req 3</span><span class="tag tag-media">Brecha media</span></div>
+        <div class="score-row"><span class="score-label">Seguridad</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">2/5 · req 4</span><span class="tag tag-alta">Brecha alta</span></div>
+        <div class="score-row"><span class="score-label">Resolución de problemas</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">2/5 · req 4</span><span class="tag tag-alta">Brecha alta</span></div>
+      </div>
+      <canvas id="r7" width="140" height="140"></canvas>
+    </div>
+    <p class="card-note">Domina Excel avanzado pero no ha migrado al módulo financiero del ERP. Representa el riesgo de fuga de información más crítico: maneja datos sensibles fuera del sistema.</p>
+  </div>
+
+  <!-- Perfil 8 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="badge" style="background:var(--coral-light);color:var(--coral-dark)">FL</div>
+      <div class="card-meta">
+        <h2>8. Fernando López — Vendedor de Piso</h2>
+        <p>El Salvador · 23 años · Bachillerato diversificado</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="scores">
+        <div class="score-row"><span class="score-label">Alfabetización informacional</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">2/5 · req 3</span><span class="tag tag-media">Brecha media</span></div>
+        <div class="score-row"><span class="score-label">Comunicación y colaboración</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">3/5 · req 3</span><span class="tag tag-baja">Sin brecha</span></div>
+        <div class="score-row"><span class="score-label">Creación de contenido digital</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">2/5 · req 2</span><span class="tag tag-baja">Sin brecha</span></div>
+        <div class="score-row"><span class="score-label">Seguridad</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">2/5 · req 3</span><span class="tag tag-media">Brecha media</span></div>
+        <div class="score-row"><span class="score-label">Resolución de problemas</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">2/5 · req 3</span><span class="tag tag-media">Brecha media</span></div>
+      </div>
+      <canvas id="r8" width="140" height="140"></canvas>
+    </div>
+    <p class="card-note">Nativo digital en consumo pero no en entornos laborales. Usa el punto de venta de forma mecánica sin entender el flujo de datos. Alto potencial de aprendizaje por su edad.</p>
+  </div>
+
+  <!-- Perfil 9 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="badge" style="background:var(--purple-light);color:var(--purple-dark)">VC</div>
+      <div class="card-meta">
+        <h2>9. Valeria Cruz — Especialista en Compras</h2>
+        <p>Costa Rica · 38 años · Licenciatura en Comercio Internacional</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="scores">
+        <div class="score-row"><span class="score-label">Alfabetización informacional</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div></div><span class="score-meta">4/5 · req 5</span><span class="tag tag-media">Brecha media</span></div>
+        <div class="score-row"><span class="score-label">Comunicación y colaboración</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div></div><span class="score-meta">4/5 · req 4</span><span class="tag tag-baja">Sin brecha</span></div>
+        <div class="score-row"><span class="score-label">Creación de contenido digital</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">3/5 · req 3</span><span class="tag tag-baja">Sin brecha</span></div>
+        <div class="score-row"><span class="score-label">Seguridad</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div></div><span class="score-meta">3/5 · req 4</span><span class="tag tag-media">Brecha media</span></div>
+        <div class="score-row"><span class="score-label">Resolución de problemas</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div></div><span class="score-meta">4/5 · req 5</span><span class="tag tag-media">Brecha media</span></div>
+      </div>
+      <canvas id="r9" width="140" height="140"></canvas>
+    </div>
+    <p class="card-note">Perfil sólido con buen manejo de plataformas de proveedores internacionales. Su brecha está en integrar el módulo de compras del ERP con los procesos de negociación que aún hace por correo.</p>
+  </div>
+
+  <!-- Perfil 10 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="badge" style="background:var(--blue-light);color:var(--blue-dark)">JM</div>
+      <div class="card-meta">
+        <h2>10. Jorge Méndez — Gerente de TI</h2>
+        <p>Guatemala · 44 años · Maestría en Gestión de Tecnología</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="scores">
+        <div class="score-row"><span class="score-label">Alfabetización informacional</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div></div><span class="score-meta">5/5 · req 5</span><span class="tag tag-baja">Sin brecha</span></div>
+        <div class="score-row"><span class="score-label">Comunicación y colaboración</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-empty"></div></div><span class="score-meta">4/5 · req 5</span><span class="tag tag-media">Brecha media</span></div>
+        <div class="score-row"><span class="score-label">Creación de contenido digital</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div></div><span class="score-meta">5/5 · req 5</span><span class="tag tag-baja">Sin brecha</span></div>
+        <div class="score-row"><span class="score-label">Seguridad</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div></div><span class="score-meta">5/5 · req 5</span><span class="tag tag-baja">Sin brecha</span></div>
+        <div class="score-row"><span class="score-label">Resolución de problemas</span><div class="dots"><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div><div class="dot dot-actual"></div></div><span class="score-meta">5/5 · req 5</span><span class="tag tag-baja">Sin brecha</span></div>
+      </div>
+      <canvas id="r10" width="140" height="140"></canvas>
+    </div>
+    <p class="card-note">Competencia digital plena. Su brecha no es técnica sino de liderazgo: no ha logrado transferir su conocimiento al resto de la organización ni crear una cultura de adopción digital.</p>
+  </div>
+
+</div>
+
+<footer>VidaNatura Centroamérica S.A. · Consultoría de Transformación Digital 2026 · Sección 02 — Diagnósticos Individuales</footer>
+
+<script>
+function drawRadar(id, actual, required) {
+  const canvas = document.getElementById(id);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const cx = 70, cy = 70, r = 52;
+  const labels = ['Inform.', 'Comun.', 'Contenido', 'Seguridad', 'Resoluc.'];
+  const n = 5;
+  const angles = labels.map((_, i) => (Math.PI * 2 * i / n) - Math.PI / 2);
+  ctx.clearRect(0, 0, 140, 140);
+  for (let lv = 1; lv <= 5; lv++) {
+    ctx.beginPath();
+    angles.forEach((a, i) => { const x = cx+(r*lv/5)*Math.cos(a), y = cy+(r*lv/5)*Math.sin(a); i===0?ctx.moveTo(x,y):ctx.lineTo(x,y); });
+    ctx.closePath(); ctx.strokeStyle='rgba(128,128,128,0.2)'; ctx.lineWidth=0.5; ctx.stroke();
+  }
+  angles.forEach(a => { ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(cx+r*Math.cos(a),cy+r*Math.sin(a)); ctx.strokeStyle='rgba(128,128,128,0.2)'; ctx.lineWidth=0.5; ctx.stroke(); });
+  ctx.beginPath();
+  angles.forEach((a,i) => { const x=cx+(r*required[i]/5)*Math.cos(a), y=cy+(r*required[i]/5)*Math.sin(a); i===0?ctx.moveTo(x,y):ctx.lineTo(x,y); });
+  ctx.closePath(); ctx.fillStyle='rgba(127,119,221,0.15)'; ctx.fill(); ctx.strokeStyle='#7F77DD'; ctx.lineWidth=1; ctx.stroke();
+  ctx.beginPath();
+  angles.forEach((a,i) => { const x=cx+(r*actual[i]/5)*Math.cos(a), y=cy+(r*actual[i]/5)*Math.sin(a); i===0?ctx.moveTo(x,y):ctx.lineTo(x,y); });
+  ctx.closePath(); ctx.fillStyle='rgba(29,158,117,0.25)'; ctx.fill(); ctx.strokeStyle='#1D9E75'; ctx.lineWidth=1.5; ctx.stroke();
+  ctx.fillStyle='rgba(100,100,100,0.75)'; ctx.font='9px sans-serif'; ctx.textAlign='center';
+  angles.forEach((a,i) => { const lx=cx+(r+12)*Math.cos(a), ly=cy+(r+12)*Math.sin(a); ctx.fillText(labels[i],lx,ly+3); });
+}
+drawRadar('r6',  [5,4,5,4,5], [5,5,5,5,5]);
+drawRadar('r7',  [2,3,2,2,2], [4,4,3,4,4]);
+drawRadar('r8',  [2,3,2,2,2], [3,3,2,3,3]);
+drawRadar('r9',  [4,4,3,3,4], [5,4,3,4,5]);
+drawRadar('r10', [5,4,5,5,5], [5,5,5,5,5]);
+</script>
+
+
+</body></html>
